@@ -8,8 +8,9 @@ from .models import *
 
 def example_get(request, var_a, var_b):
 	try:
+		var_b = var_b*var_b
 		returnob = {
-		"data": "%sverystrongpassword: %spassthedoof" %(var_a, var_b),
+		"data": "%s: %s" %(var_a, var_b),
 		}
 		return JsonResponse(returnob)
 	except Exception as e:
